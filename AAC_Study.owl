@@ -259,6 +259,9 @@
         <Class IRI="#WaterContent"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#hasOutput"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#hasPart"/>
     </Declaration>
     <Declaration>
@@ -266,6 +269,9 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOutputOf"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#isPartOf"/>
@@ -581,13 +587,6 @@
         <Class IRI="#ConstituentMaterial"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Activator"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#hasParticipant"/>
-            <Class IRI="#Mix"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ActivatorContent"/>
         <Class IRI="#Content"/>
     </SubClassOf>
@@ -719,6 +718,13 @@
         <Class IRI="#Material"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ConstituentMaterial"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPartOf"/>
+            <Class IRI="#Mix"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Content"/>
         <Class IRI="#MaterialProperties"/>
     </SubClassOf>
@@ -744,6 +750,13 @@
     <SubClassOf>
         <Class IRI="#Curing"/>
         <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasOutput"/>
+            <Class IRI="#FinalMaterial"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Curing"/>
@@ -797,6 +810,13 @@
     <SubClassOf>
         <Class IRI="#FinalMaterial"/>
         <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FinalMaterial"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isOutputOf"/>
+            <Class IRI="#Curing"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FineAggregate"/>
@@ -883,6 +903,13 @@
     <SubClassOf>
         <Class IRI="#Mix"/>
         <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#ConstituentMaterial"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mix"/>
@@ -1550,6 +1577,10 @@
         <NamedIndividual IRI="#WaterFinalCuring"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasOutput"/>
+        <ObjectProperty IRI="#hasParticipant"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasPart"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -1560,6 +1591,10 @@
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasProperty"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isOutputOf"/>
+        <ObjectProperty IRI="#participatesIn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#isPartOf"/>
@@ -1573,6 +1608,10 @@
         <ObjectProperty IRI="#participatesIn"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasOutput"/>
+        <ObjectProperty IRI="#isOutputOf"/>
+    </InverseObjectProperties>
     <InverseObjectProperties>
         <ObjectProperty IRI="#hasPart"/>
         <ObjectProperty IRI="#isPartOf"/>
@@ -3262,6 +3301,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#hasOutput</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#hasOutput</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:38:41Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#hasPart</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -3289,6 +3338,16 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#hasProperty</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T08:50:22Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#isOutputOf</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#isOutputOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:39:05Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
