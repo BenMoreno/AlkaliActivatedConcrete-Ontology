@@ -61,6 +61,9 @@
         <Class IRI="#Concrete"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#ConcreteMix"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#ConstituentMaterial"/>
     </Declaration>
     <Declaration>
@@ -79,10 +82,16 @@
         <Class IRI="#Curing"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CuringHumidity"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#CuringMethod"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CuringProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CuringTemperature"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CylinderSample"/>
@@ -124,9 +133,6 @@
         <Class IRI="#Gravel"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Humidity"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#HydraulicCement"/>
     </Declaration>
     <Declaration>
@@ -154,10 +160,16 @@
         <Class IRI="#Metakaolin"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Mix"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#MolecularCompositionPercentage"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Mortar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MortarMix"/>
     </Declaration>
     <Declaration>
         <Class IRI="#NaturalPozzolan"/>
@@ -170,6 +182,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Paste"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PasteMix"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Process"/>
@@ -235,9 +250,6 @@
         <Class IRI="#SupplementaryCementingMaterialsContent"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Temperature"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Volume"/>
     </Declaration>
     <Declaration>
@@ -245,6 +257,24 @@
     </Declaration>
     <Declaration>
         <Class IRI="#WaterContent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasPart"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasParticipant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isPropertyOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#participatesIn"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#AbrasionResistance"/>
@@ -551,8 +581,22 @@
         <Class IRI="#ConstituentMaterial"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Activator"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Mix"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ActivatorContent"/>
         <Class IRI="#Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ActivatorContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Activator"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Additive"/>
@@ -563,12 +607,26 @@
         <Class IRI="#Content"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#AdditiveContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Additive"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Aggregate"/>
         <Class IRI="#ConstituentMaterial"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AggregateContent"/>
         <Class IRI="#Content"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AggregateContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Aggregate"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AlkaliSolution"/>
@@ -591,8 +649,22 @@
         <Class IRI="#Content"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BinderContent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Binder"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BinderMolCompPercentage"/>
         <Class IRI="#MolecularCompositionPercentage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BinderMolCompPercentage"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Binder"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CoarseAggregate"/>
@@ -609,6 +681,38 @@
     <SubClassOf>
         <Class IRI="#Concrete"/>
         <Class IRI="#FinalMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteMix"/>
+        <Class IRI="#Mix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Activator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Binder"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#CoarseAggregate"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ConcreteMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#FineAggregate"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConstituentMaterial"/>
@@ -631,8 +735,26 @@
         <Class IRI="#SampleProperties"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CubeSampleProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#CubeSample"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Curing"/>
         <Class IRI="#Process"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Curing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasParticipant"/>
+            <Class IRI="#Mix"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CuringHumidity"/>
+        <Class IRI="#CuringProperties"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CuringMethod"/>
@@ -643,12 +765,30 @@
         <Class IRI="#Properties"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CuringProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Curing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CuringTemperature"/>
+        <Class IRI="#CuringProperties"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#CylinderSample"/>
         <Class IRI="#Sample"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CylinderSampleProperties"/>
         <Class IRI="#SampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CylinderSampleProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#CylinderSample"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FinalCuringMethod"/>
@@ -695,10 +835,6 @@
         <Class IRI="#CoarseAggregate"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Humidity"/>
-        <Class IRI="#CuringProperties"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#HydraulicCement"/>
         <Class IRI="#Binder"/>
     </SubClassOf>
@@ -719,8 +855,22 @@
         <Class IRI="#Reference"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#InsideReferenceSampleID"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Sample"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MaterialDensity"/>
         <Class IRI="#MaterialProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialDensity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Material"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MaterialProperties"/>
@@ -731,12 +881,48 @@
         <Class IRI="#SupplementaryCementingMaterials"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Mix"/>
+        <Class IRI="#Material"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#participatesIn"/>
+            <Class IRI="#Curing"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MolecularCompositionPercentage"/>
         <Class IRI="#MaterialProperties"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mortar"/>
         <Class IRI="#FinalMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MortarMix"/>
+        <Class IRI="#Mix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MortarMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Activator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MortarMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Binder"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MortarMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#FineAggregate"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#NaturalPozzolan"/>
@@ -753,6 +939,24 @@
     <SubClassOf>
         <Class IRI="#Paste"/>
         <Class IRI="#FinalMaterial"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PasteMix"/>
+        <Class IRI="#Mix"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PasteMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Activator"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PasteMix"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasPart"/>
+            <Class IRI="#Binder"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Ratio"/>
@@ -791,8 +995,22 @@
         <Class IRI="#Reference"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#SampleID"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Sample"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#SampleProperties"/>
         <Class IRI="#Properties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Sample"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Sand"/>
@@ -805,6 +1023,13 @@
     <SubClassOf>
         <Class IRI="#Slump"/>
         <Class IRI="#MaterialProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Slump"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#FinalMaterial"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SuperPlastifier"/>
@@ -823,12 +1048,15 @@
         <Class IRI="#BinderContent"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Temperature"/>
-        <Class IRI="#CuringProperties"/>
+        <Class IRI="#Volume"/>
+        <Class IRI="#MaterialProperties"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Volume"/>
-        <Class IRI="#MaterialProperties"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Material"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Water"/>
@@ -879,6 +1107,11 @@
         <Class IRI="#Paste"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#ConcreteMix"/>
+        <Class IRI="#MortarMix"/>
+        <Class IRI="#PasteMix"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#ConstituentMaterial"/>
         <Class IRI="#FinalMaterial"/>
     </DisjointClasses>
@@ -895,9 +1128,9 @@
         <Class IRI="#CylinderSampleProperties"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#CuringHumidity"/>
         <Class IRI="#CuringMethod"/>
-        <Class IRI="#Humidity"/>
-        <Class IRI="#Temperature"/>
+        <Class IRI="#CuringTemperature"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#CuringProperties"/>
@@ -1316,6 +1549,42 @@
         <Class IRI="#FinalCuringMethod"/>
         <NamedIndividual IRI="#WaterFinalCuring"/>
     </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hasProperty"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isPartOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#isPropertyOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#participatesIn"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasPart"/>
+        <ObjectProperty IRI="#isPartOf"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasParticipant"/>
+        <ObjectProperty IRI="#participatesIn"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#hasProperty"/>
+        <ObjectProperty IRI="#isPropertyOf"/>
+    </InverseObjectProperties>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#AbrasionResistance</IRI>
@@ -1608,6 +1877,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#ConcreteMix</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#ConcreteMix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:06:22Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#ConstituentMaterial</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -1718,6 +1997,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CuringHumidity</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CuringHumidity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:21:30Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#CuringMethod</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -1735,6 +2024,16 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#CuringProperties</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:20:49Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CuringTemperature</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CuringTemperature</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:21:30Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2048,16 +2347,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Humidity</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Humidity</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:21:30Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#HydraulicCement</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2258,6 +2547,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#Mix</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#Mix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:05:53Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#Mn2O3_MolCompPerc</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2285,6 +2584,16 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#Mortar</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:06:49Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#MortarMix</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#MortarMix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:06:22Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2465,6 +2774,16 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#PasteContent</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T09:40:02Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#PasteMix</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#PasteMix</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:06:22Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2888,16 +3207,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Temperature</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Temperature</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:21:30Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#TiO2_MolCompPerc</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2950,6 +3259,66 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#WaterFinalCuring</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:06:51Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#hasPart</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#hasPart</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:10:53Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#hasParticipant</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#hasParticipant</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:07:51Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#hasProperty</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#hasProperty</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T08:50:22Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#isPartOf</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#isPartOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:10:53Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#isPropertyOf</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#isPropertyOf</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T08:50:22Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#participatesIn</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#participatesIn</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-10T09:07:51Z</Literal>
     </AnnotationAssertion>
 </Ontology>
 
