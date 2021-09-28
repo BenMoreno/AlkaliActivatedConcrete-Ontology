@@ -1,17 +1,23 @@
 <?xml version="1.0"?>
 <Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://www.semanticweb.org/btorres/ontologies/2021/7/untitled-ontology-49"
+     xml:base="http://www.semanticweb.org/btorres/ontologies/2021/7/AAC_Ontology"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://www.semanticweb.org/btorres/ontologies/2021/7/untitled-ontology-49">
+     ontologyIRI="http://www.semanticweb.org/btorres/ontologies/2021/7/AAC_Ontology">
     <Prefix name="" IRI="http://www.semanticweb.org/btorres/ontologies/2021/7/untitled-ontology-49"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ExtendedRelationOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/InformationEntityOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/UnitsOfMeasureOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Upper/2021-03-01/ROImport</Import>
     <Declaration>
         <Class IRI="#Activator"/>
     </Declaration>
@@ -52,12 +58,6 @@
         <Class IRI="#CoarseAggregate"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CoarseAggregateContent"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Concentration"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Concrete"/>
     </Declaration>
     <Declaration>
@@ -67,9 +67,6 @@
         <Class IRI="#ConstituentMaterial"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Content"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#CrushedStone"/>
     </Declaration>
     <Declaration>
@@ -77,6 +74,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#CubeSampleProperties"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CubeSampleStrength"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Curing"/>
@@ -100,16 +100,19 @@
         <Class IRI="#CylinderSampleProperties"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#CylinderSampleStrength"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#FinalCuringMethod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FinalCuringTemperature"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FinalMaterial"/>
     </Declaration>
     <Declaration>
         <Class IRI="#FineAggregate"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#FineAggregateContent"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Fineness"/>
@@ -127,10 +130,13 @@
         <Class IRI="#Geosynthetic"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#GeosyntheticContent"/>
+        <Class IRI="#GranulatedLeadSmelterSlag"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Gravel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GroundGranulatedBlastFurnaceSlag"/>
     </Declaration>
     <Declaration>
         <Class IRI="#HydraulicCement"/>
@@ -142,25 +148,34 @@
         <Class IRI="#InitialCuringMethod"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#InitialCuringRestTime"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InitialCuringTemperature"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#InitialCuringTime"/>
     </Declaration>
     <Declaration>
         <Class IRI="#InsideReferenceSampleID"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Material"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#MaterialDensity"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialInAACField"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Metakaolin"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Mix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MolarConcentrationInAACField"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MolecularCompositionPercentage"/>
@@ -187,31 +202,25 @@
         <Class IRI="#PasteMix"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Process"/>
+        <Class IRI="#ProcessInAACField"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Properties"/>
+        <Class IRI="#PublicationAuthors"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#PublicationYear"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RatioInAACField"/>
     </Declaration>
     <Declaration>
         <Class IRI="#RecycledConcrete"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Reference"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#ReferenceAuthors"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#ReferenceCode"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#ReferenceYear"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RestTime"/>
+        <Class IRI="#ReferencePublication"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Retarder"/>
@@ -220,13 +229,13 @@
         <Class IRI="#RetarderContent"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Sample"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#SampleID"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SampleInCementField"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SamplePropertiesInAACField"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Sand"/>
@@ -286,9 +295,6 @@
         <NamedIndividual IRI="#AbrasionResistance"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#AggregateContent"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#AggregateToBinderRatio"/>
     </Declaration>
     <Declaration>
@@ -310,9 +316,6 @@
         <NamedIndividual IRI="#Ba_OH_2"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#BinderContent"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#CaO_MolCompPerc"/>
     </Declaration>
     <Declaration>
@@ -323,6 +326,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CitricAcid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CoarseAggregateContent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CoarseAggregateDensity"/>
@@ -340,7 +346,34 @@
         <NamedIndividual IRI="#CubeSampleSplitTensileStrength"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_14_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_180_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_1_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_21_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_28_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_365_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_3_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_56_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_7_Day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CubeSampleStrength_90_Day"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#CubeSideLength"/>
@@ -361,13 +394,43 @@
         <NamedIndividual IRI="#CylinderSampleSplitTensileStrength"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_14_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_180_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_1_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_21_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_28_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_365_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_3_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_56_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_7_day"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CylinderSampleStrength_90_day"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#ExternalExposure"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Fe2O3_MolCompPerc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FineAggregateContent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#FineAggregateDensity"/>
@@ -382,22 +445,22 @@
         <NamedIndividual IRI="#FlyingAshContent"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#FlyingAshesDensity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#FlyingAshesFineness"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#FumeContent"/>
+        <NamedIndividual IRI="#GGBFSDensity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GeopolymerBinderContent"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#GranulatedLeadSmelterSlag"/>
+        <NamedIndividual IRI="#GeosynthethicContent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GranulatedLeadSmelterSlagToFlyingAshRatio"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#GroundGranulatedBlastFurnaceSlag"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#GroundGranulatedBlastFurnaceToFlyAshRatio"/>
@@ -416,6 +479,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#KOH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#KaolinDensity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#LiOH"/>
@@ -448,13 +514,13 @@
         <NamedIndividual IRI="#Mn2O3_MolCompPerc"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Na2O_MolCompPerc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Na2SiO3"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Na2SiO3MassContent"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Na2_MolCompPerc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#NaOH"/>
@@ -466,6 +532,9 @@
         <NamedIndividual IRI="#NaturalPozzolanContent"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#OPCDensity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#OrdinaryPortlandCementContent"/>
     </Declaration>
     <Declaration>
@@ -473,6 +542,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#OtherSCMContent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OtherSCMDensity"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Oven"/>
@@ -488,9 +560,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PalmOilFuelToGroundGranulatedBlastFurnaceRatio"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#PasteContent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#PasteVolume"/>
@@ -526,6 +595,12 @@
         <NamedIndividual IRI="#SilicaFume"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#SilicaFumeContent"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SilicaFumeDensity"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#SilicaFumeToFlyingAshRatio"/>
     </Declaration>
     <Declaration>
@@ -559,9 +634,6 @@
         <NamedIndividual IRI="#SugarGlucose"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#SuperPlasticizerContent"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#TerminaliaChebula"/>
     </Declaration>
     <Declaration>
@@ -569,9 +641,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#VolcanicAsh"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#WaterContent"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#WaterFinalCuring"/>
@@ -588,13 +657,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ActivatorContent"/>
-        <Class IRI="#Content"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ActivatorContent"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Activator"/>
+            <Class IRI="#Mix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -603,13 +672,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AdditiveContent"/>
-        <Class IRI="#Content"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AdditiveContent"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Additive"/>
+            <Class IRI="#Mix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -618,13 +687,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AggregateContent"/>
-        <Class IRI="#Content"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#AggregateContent"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Aggregate"/>
+            <Class IRI="#Mix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -645,13 +714,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BinderContent"/>
-        <Class IRI="#Content"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#BinderContent"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Binder"/>
+            <Class IRI="#Mix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -668,14 +737,6 @@
     <SubClassOf>
         <Class IRI="#CoarseAggregate"/>
         <Class IRI="#Aggregate"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#CoarseAggregateContent"/>
-        <Class IRI="#AggregateContent"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Concentration"/>
-        <Class IRI="#MaterialProperties"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Concrete"/>
@@ -715,7 +776,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConstituentMaterial"/>
-        <Class IRI="#Material"/>
+        <Class IRI="#MaterialInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ConstituentMaterial"/>
@@ -725,20 +786,16 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Content"/>
-        <Class IRI="#MaterialProperties"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#CrushedStone"/>
         <Class IRI="#CoarseAggregate"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CubeSample"/>
-        <Class IRI="#Sample"/>
+        <Class IRI="#SampleInCementField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CubeSampleProperties"/>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SamplePropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CubeSampleProperties"/>
@@ -748,8 +805,12 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CubeSampleStrength"/>
+        <Class IRI="#CubeSampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Curing"/>
-        <Class IRI="#Process"/>
+        <Class IRI="#ProcessInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Curing"/>
@@ -775,7 +836,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CuringProperties"/>
-        <Class IRI="#Properties"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CuringProperties"/>
@@ -790,11 +851,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CylinderSample"/>
-        <Class IRI="#Sample"/>
+        <Class IRI="#SampleInCementField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CylinderSampleProperties"/>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SamplePropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CylinderSampleProperties"/>
@@ -804,12 +865,20 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#CylinderSampleStrength"/>
+        <Class IRI="#CylinderSampleProperties"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FinalCuringMethod"/>
         <Class IRI="#CuringMethod"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#FinalCuringTemperature"/>
+        <Class IRI="#CuringProperties"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#FinalMaterial"/>
-        <Class IRI="#Material"/>
+        <Class IRI="#MaterialInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FinalMaterial"/>
@@ -823,16 +892,12 @@
         <Class IRI="#Aggregate"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#FineAggregateContent"/>
-        <Class IRI="#AggregateContent"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#Fineness"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#FlashSetting"/>
-        <Class IRI="#Process"/>
+        <Class IRI="#ProcessInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Fume"/>
@@ -847,12 +912,16 @@
         <Class IRI="#Aggregate"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#GeosyntheticContent"/>
-        <Class IRI="#AggregateContent"/>
+        <Class IRI="#GranulatedLeadSmelterSlag"/>
+        <Class IRI="#Slag"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Gravel"/>
         <Class IRI="#CoarseAggregate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GroundGranulatedBlastFurnaceSlag"/>
+        <Class IRI="#Slag"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#HydraulicCement"/>
@@ -867,34 +936,46 @@
         <Class IRI="#CuringMethod"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#InitialCuringRestTime"/>
+        <Class IRI="#CuringProperties"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InitialCuringTemperature"/>
+        <Class IRI="#CuringMethod"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#InitialCuringTime"/>
         <Class IRI="#CuringProperties"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#InsideReferenceSampleID"/>
-        <Class IRI="#Reference"/>
+        <Class IRI="#SampleID"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#InsideReferenceSampleID"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Sample"/>
+            <Class IRI="#SampleInCementField"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MaterialDensity"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#MaterialDensity"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Material"/>
+            <Class IRI="#MaterialInAACField"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#MaterialProperties"/>
-        <Class IRI="#Properties"/>
+        <Class IRI="#MaterialInAACField"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialPropertiesInAACField"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Metakaolin"/>
@@ -902,7 +983,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mix"/>
-        <Class IRI="#Material"/>
+        <Class IRI="#MaterialInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mix"/>
@@ -919,8 +1000,19 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#MolarConcentrationInAACField"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MolarConcentrationInAACField"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#AlkaliSolution"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#MolecularCompositionPercentage"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Mortar"/>
@@ -986,28 +1078,39 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Ratio"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#ProcessInAACField"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000015"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicationAuthors"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/List"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PublicationYear"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/YearIdentifier"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RatioInAACField"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ProportionalRatioMeasurementInformationContentEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RatioInAACField"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#Mix"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#RecycledConcrete"/>
         <Class IRI="#CoarseAggregate"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ReferenceAuthors"/>
-        <Class IRI="#Reference"/>
-    </SubClassOf>
-    <SubClassOf>
         <Class IRI="#ReferenceCode"/>
-        <Class IRI="#Reference"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#ReferenceYear"/>
-        <Class IRI="#Reference"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RestTime"/>
-        <Class IRI="#CuringProperties"/>
+        <Class IRI="#ReferencePublication"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Document"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Retarder"/>
@@ -1019,24 +1122,28 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SampleID"/>
-        <Class IRI="#Reference"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SampleID"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Sample"/>
+            <Class IRI="#SampleInCementField"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SampleProperties"/>
-        <Class IRI="#Properties"/>
+        <Class IRI="#SampleInCementField"/>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SamplePropertiesInAACField"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SamplePropertiesInAACField"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Sample"/>
+            <Class IRI="#SampleInCementField"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1049,13 +1156,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Slump"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Slump"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#FinalMaterial"/>
+            <Class IRI="#Mix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1076,13 +1183,13 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Volume"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Volume"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#Material"/>
+            <Class IRI="#MaterialInAACField"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1124,11 +1231,6 @@
         <Class IRI="#FineAggregate"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#CoarseAggregateContent"/>
-        <Class IRI="#FineAggregateContent"/>
-        <Class IRI="#GeosyntheticContent"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#Concrete"/>
         <Class IRI="#Mortar"/>
         <Class IRI="#Paste"/>
@@ -1141,10 +1243,6 @@
     <DisjointClasses>
         <Class IRI="#ConstituentMaterial"/>
         <Class IRI="#FinalMaterial"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Content"/>
-        <Class IRI="#Ratio"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#CubeSample"/>
@@ -1161,39 +1259,26 @@
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#CuringProperties"/>
-        <Class IRI="#MaterialProperties"/>
+        <Class IRI="#MaterialPropertiesInAACField"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#GranulatedLeadSmelterSlag"/>
+        <Class IRI="#GroundGranulatedBlastFurnaceSlag"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#HydraulicCementContent"/>
         <Class IRI="#SupplementaryCementingMaterialsContent"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#InsideReferenceSampleID"/>
-        <Class IRI="#ReferenceAuthors"/>
-        <Class IRI="#ReferenceCode"/>
-        <Class IRI="#ReferenceYear"/>
-        <Class IRI="#SampleID"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="#Material"/>
-        <Class IRI="#Process"/>
-        <Class IRI="#Properties"/>
-        <Class IRI="#Reference"/>
-    </DisjointClasses>
-    <DisjointClasses>
         <Class IRI="#RetarderContent"/>
         <Class IRI="#SuperPlastifierContent"/>
     </DisjointClasses>
     <ClassAssertion>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SamplePropertiesInAACField"/>
         <NamedIndividual IRI="#AbrasionResistance"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Content"/>
-        <NamedIndividual IRI="#AggregateContent"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#AggregateToBinderRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1209,7 +1294,7 @@
         <NamedIndividual IRI="#Al_OH_3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#AlkalineSolutionToFlyAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1219,10 +1304,6 @@
     <ClassAssertion>
         <Class IRI="#AlkaliSolution"/>
         <NamedIndividual IRI="#Ba_OH_2"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Content"/>
-        <NamedIndividual IRI="#BinderContent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#BinderMolCompPercentage"/>
@@ -1239,6 +1320,10 @@
     <ClassAssertion>
         <Class IRI="#Retarder"/>
         <NamedIndividual IRI="#CitricAcid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AggregateContent"/>
+        <NamedIndividual IRI="#CoarseAggregateContent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#MaterialDensity"/>
@@ -1261,8 +1346,44 @@
         <NamedIndividual IRI="#CubeSampleSplitTensileStrength"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CubeSampleProperties"/>
-        <NamedIndividual IRI="#CubeSampleStrength"/>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_14_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_180_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_1_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_21_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_28_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_365_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_3_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_56_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_7_Day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CubeSampleStrength"/>
+        <NamedIndividual IRI="#CubeSampleStrength_90_Day"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CubeSampleProperties"/>
@@ -1289,8 +1410,44 @@
         <NamedIndividual IRI="#CylinderSampleSplitTensileStrength"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#CylinderSampleProperties"/>
-        <NamedIndividual IRI="#CylinderSampleStrength"/>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_14_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_180_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_1_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_21_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_28_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_365_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_3_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_56_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_7_day"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CylinderSampleStrength"/>
+        <NamedIndividual IRI="#CylinderSampleStrength_90_day"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CuringMethod"/>
@@ -1301,11 +1458,15 @@
         <NamedIndividual IRI="#Fe2O3_MolCompPerc"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#AggregateContent"/>
+        <NamedIndividual IRI="#FineAggregateContent"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#MaterialDensity"/>
         <NamedIndividual IRI="#FineAggregateDensity"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#FineToCoarseAggregateRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1317,31 +1478,31 @@
         <NamedIndividual IRI="#FlyingAshContent"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MaterialDensity"/>
+        <NamedIndividual IRI="#FlyingAshesDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Fineness"/>
         <NamedIndividual IRI="#FlyingAshesFineness"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#SupplementaryCementingMaterialsContent"/>
-        <NamedIndividual IRI="#FumeContent"/>
+        <Class IRI="#MaterialDensity"/>
+        <NamedIndividual IRI="#GGBFSDensity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SupplementaryCementingMaterialsContent"/>
         <NamedIndividual IRI="#GeopolymerBinderContent"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Slag"/>
-        <NamedIndividual IRI="#GranulatedLeadSmelterSlag"/>
+        <Class IRI="#AggregateContent"/>
+        <NamedIndividual IRI="#GeosynthethicContent"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#GranulatedLeadSmelterSlagToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Slag"/>
-        <NamedIndividual IRI="#GroundGranulatedBlastFurnaceSlag"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#GroundGranulatedBlastFurnaceToFlyAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1349,7 +1510,7 @@
         <NamedIndividual IRI="#Gypsum"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#H2OToNa2ORatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1365,6 +1526,10 @@
         <NamedIndividual IRI="#KOH"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MaterialDensity"/>
+        <NamedIndividual IRI="#KaolinDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#AlkaliSolution"/>
         <NamedIndividual IRI="#LiOH"/>
     </ClassAssertion>
@@ -1373,7 +1538,7 @@
         <NamedIndividual IRI="#LimeSlurry"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#LiquidToBinderRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1381,7 +1546,7 @@
         <NamedIndividual IRI="#LossOnIgnition_MolCompPerc"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#MetaKaolinToGrounGranulatedBlastFurnaceRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1389,7 +1554,7 @@
         <NamedIndividual IRI="#MetakaolinContent"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#MetakaolinToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1405,23 +1570,23 @@
         <NamedIndividual IRI="#Mn2O3_MolCompPerc"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#BinderMolCompPercentage"/>
+        <NamedIndividual IRI="#Na2O_MolCompPerc"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#AlkaliSolution"/>
         <NamedIndividual IRI="#Na2SiO3"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Content"/>
+        <Class IRI="#AlkaliSolutionContent"/>
         <NamedIndividual IRI="#Na2SiO3MassContent"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#BinderMolCompPercentage"/>
-        <NamedIndividual IRI="#Na2_MolCompPerc"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#AlkaliSolution"/>
         <NamedIndividual IRI="#NaOH"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Content"/>
+        <Class IRI="#AlkaliSolutionContent"/>
         <NamedIndividual IRI="#NaOHMassContent"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1429,16 +1594,24 @@
         <NamedIndividual IRI="#NaturalPozzolanContent"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#MaterialDensity"/>
+        <NamedIndividual IRI="#OPCDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#HydraulicCementContent"/>
         <NamedIndividual IRI="#OrdinaryPortlandCementContent"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#OrdinaryPortlandCementToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#SupplementaryCementingMaterialsContent"/>
         <NamedIndividual IRI="#OtherSCMContent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MaterialDensity"/>
+        <NamedIndividual IRI="#OtherSCMDensity"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#CuringMethod"/>
@@ -1453,16 +1626,12 @@
         <NamedIndividual IRI="#PalmOilFuelAsh"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#PalmOilFuelAshToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#PalmOilFuelToGroundGranulatedBlastFurnaceRatio"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Content"/>
-        <NamedIndividual IRI="#PasteContent"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Volume"/>
@@ -1477,11 +1646,11 @@
         <NamedIndividual IRI="#RiceHuskAsh"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#RiceHuskAshToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#RiceHuskAshToGroundGranulatedBlastFurnaceRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1489,11 +1658,11 @@
         <NamedIndividual IRI="#SO3_MolCompPerc"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SamplePropertiesInAACField"/>
         <NamedIndividual IRI="#SampleCompressiveYoungModulus"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#SampleProperties"/>
+        <Class IRI="#SamplePropertiesInAACField"/>
         <NamedIndividual IRI="#SamplePermeability"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1509,11 +1678,19 @@
         <NamedIndividual IRI="#SilicaFume"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#SupplementaryCementingMaterialsContent"/>
+        <NamedIndividual IRI="#SilicaFumeContent"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MaterialDensity"/>
+        <NamedIndividual IRI="#SilicaFumeDensity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#SilicaFumeToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#SilicateOxideToAluminumOxideRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1521,19 +1698,19 @@
         <NamedIndividual IRI="#SlagContent"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#SlumpFlowToFlyingAshRatio"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Concentration"/>
+        <Class IRI="#MolarConcentrationInAACField"/>
         <NamedIndividual IRI="#SodiumHydroxideConcentration"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Concentration"/>
+        <Class IRI="#MolarConcentrationInAACField"/>
         <NamedIndividual IRI="#SodiumSilicateConcentration"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Ratio"/>
+        <Class IRI="#RatioInAACField"/>
         <NamedIndividual IRI="#SodiumSilicateToSodiumHydroxideRatio"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -1553,10 +1730,6 @@
         <NamedIndividual IRI="#SugarGlucose"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Content"/>
-        <NamedIndividual IRI="#SuperPlasticizerContent"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Retarder"/>
         <NamedIndividual IRI="#TerminaliaChebula"/>
     </ClassAssertion>
@@ -1569,13 +1742,41 @@
         <NamedIndividual IRI="#VolcanicAsh"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Content"/>
-        <NamedIndividual IRI="#WaterContent"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#FinalCuringMethod"/>
         <NamedIndividual IRI="#WaterFinalCuring"/>
     </ClassAssertion>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000050"/>
+        <ObjectProperty IRI="#isPartOf"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/BFO_0000051"/>
+        <ObjectProperty IRI="#hasPart"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000056"/>
+        <ObjectProperty IRI="#participatesIn"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000057"/>
+        <ObjectProperty IRI="#hasParticipant"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000080"/>
+        <ObjectProperty IRI="#isPropertyOf"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://purl.obolibrary.org/obo/RO_0000086"/>
+        <ObjectProperty IRI="#hasProperty"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/has_output"/>
+        <ObjectProperty IRI="#hasOutput"/>
+    </EquivalentObjectProperties>
+    <EquivalentObjectProperties>
+        <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_output_of"/>
+        <ObjectProperty IRI="#isOutputOf"/>
+    </EquivalentObjectProperties>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hasOutput"/>
         <ObjectProperty IRI="#hasParticipant"/>
@@ -1683,21 +1884,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#Aggregate</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:03:39Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#AggregateContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#AggregateContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T09:44:07Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#AggregateContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:28:20Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -1811,21 +1997,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#BinderContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#BinderContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T11:33:26Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#BinderContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:28:20Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#BinderMolCompPercentage</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -1876,16 +2047,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#CoarseAggregateContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#CoarseAggregateContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:39:01Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#CoarseAggregateDensity</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -1893,16 +2054,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#CoarseAggregateDensity</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T07:46:32Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Concentration</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Concentration</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T09:37:59Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -1933,16 +2084,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#ConstituentMaterial</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:03:04Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Content</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Content</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T08:21:10Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2012,7 +2153,107 @@
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#CubeSampleStrength</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:27:57Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_14_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_14_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:29:04Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_180_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_180_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:31:21Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_1_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_1_Day</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:20:03Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_21_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_21_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:29:26Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_28_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_28_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:29:45Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_365_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_365_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:31:39Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_3_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_3_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:27:20Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_56_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_56_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:30:26Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_7_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_7_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:28:45Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CubeSampleStrength_90_Day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CubeSampleStrength_90_Day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:30:46Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2146,13 +2387,108 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#CylinderSampleStrength</IRI>
+        <IRI>#CylinderSampleStrength_14_day</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#CylinderSampleStrength</IRI>
+        <IRI>#CylinderSampleStrength_14_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:34:52Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_180_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_180_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:36:14Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_1_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_1_day</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:18:02Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_1_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:32:21Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_21_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_21_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:35:19Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_28_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_28_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:35:31Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_365_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_365_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:36:38Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_3_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_3_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:34:29Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_56_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_56_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:35:52Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_7_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_7_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:34:40Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderSampleStrength_90_day</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderSampleStrength_90_day</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:36:03Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2186,6 +2522,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#FinalCuringTemperature</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#FinalCuringTemperature</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:21:00Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#FinalMaterial</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2203,16 +2549,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#FineAggregate</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T07:32:53Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#FineAggregateContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#FineAggregateContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:39:01Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2266,6 +2602,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#FlyingAshesDensity</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#FlyingAshesDensity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:48:33Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#FlyingAshesFineness</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2286,13 +2632,13 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#FumeContent</IRI>
+        <IRI>#GGBFSDensity</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#FumeContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:41:49Z</Literal>
+        <IRI>#GGBFSDensity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:48:55Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2316,6 +2662,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#GeosynthethicContent</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#GeosynthethicContent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:58:12Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#Geosynthetic</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2323,26 +2679,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#Geosynthetic</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:04:26Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#GeosyntheticContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#GeosyntheticContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:39:01Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#GranulatedLeadSmelterSlag</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#GranulatedLeadSmelterSlag</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T13:28:41Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2416,6 +2752,26 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#InitialCuringRestTime</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#InitialCuringRestTime</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:03:35Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#InitialCuringTemperature</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#InitialCuringTemperature</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T13:19:30Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#InitialCuringTime</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2433,6 +2789,11 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#InsideReferenceSampleID</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#InsideReferenceSampleID</IRI>
+        <Literal>The identifier of a sample used internally in the context of a specified publication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2466,6 +2827,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#KaolinDensity</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#KaolinDensity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:52:53Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#LiOH</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2496,16 +2867,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Material</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Material</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:02:29Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#MaterialDensity</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2516,12 +2877,22 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#MaterialProperties</IRI>
+        <IRI>#MaterialInAACField</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#MaterialProperties</IRI>
+        <IRI>#MaterialInAACField</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:02:29Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#MaterialPropertiesInAACField</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#MaterialPropertiesInAACField</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:20:49Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2606,6 +2977,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#MolarConcentrationInAACField</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#MolarConcentrationInAACField</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T09:37:59Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#MolecularCompositionPercentage</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2636,6 +3017,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#Na2O_MolCompPerc</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#Na2O_MolCompPerc</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:14:46Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#Na2SiO3</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2653,16 +3044,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#Na2SiO3MassContent</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T08:58:33Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Na2_MolCompPerc</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Na2_MolCompPerc</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:14:46Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2703,6 +3084,16 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#NaturalPozzolanContent</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:43:05Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#OPCDensity</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#OPCDensity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:51:07Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2756,6 +3147,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#OtherSCMDensity</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#OtherSCMDensity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:53:43Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#Oven</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2806,16 +3207,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#PasteContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#PasteContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T09:40:02Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#PasteMix</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2836,32 +3227,52 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Process</IRI>
+        <IRI>#ProcessInAACField</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Process</IRI>
+        <IRI>#ProcessInAACField</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:02:29Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Properties</IRI>
+        <IRI>#PublicationAuthors</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Properties</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:02:29Z</Literal>
+        <IRI>#PublicationAuthors</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#PublicationAuthors</IRI>
+        <Literal>A list of the authors of an specific Publication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Ratio</IRI>
+        <IRI>#PublicationYear</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Ratio</IRI>
+        <IRI>#PublicationYear</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#PublicationYear</IRI>
+        <Literal>The official year of publication of a document.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#RatioInAACField</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#RatioInAACField</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T08:21:10Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2876,53 +3287,33 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Reference</IRI>
+        <IRI>#ReferenceCode</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Reference</IRI>
+        <IRI>#ReferenceCode</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#ReferenceCode</IRI>
+        <Literal>The code used in a dataset to identify a specific publication (also called Reference)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#ReferencePublication</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#ReferencePublication</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:02:29Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#ReferenceAuthors</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#ReferenceAuthors</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#ReferenceCode</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#ReferenceCode</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#ReferenceYear</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#ReferenceYear</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#RestTime</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#RestTime</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:03:35Z</Literal>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ReferencePublication</IRI>
+        <Literal>A publication used in some other publication as a Reference</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2976,16 +3367,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#Sample</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#Sample</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:09:46Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#SampleCompressiveYoungModulus</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -3005,6 +3386,26 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#SampleID</IRI>
+        <Literal>The ID of an individual Sample in some specified context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#SampleInCementField</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#SampleInCementField</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:09:46Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
+        <IRI>#SampleInCementField</IRI>
+        <Literal>A sample of a cementious mix enough cured (hardened) to be able to be the object of some measurement in the field of Cement/Concrete research</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#SamplePermeability</IRI>
         <Literal>Benjami Moreno</Literal>
@@ -3016,12 +3417,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#SampleProperties</IRI>
+        <IRI>#SamplePropertiesInAACField</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#SampleProperties</IRI>
+        <IRI>#SamplePropertiesInAACField</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:11:48Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -3063,6 +3464,26 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#SilicaFume</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T13:23:16Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#SilicaFumeContent</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#SilicaFumeContent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:41:49Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#SilicaFumeDensity</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#SilicaFumeDensity</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-28T12:52:22Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -3196,16 +3617,6 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#SuperPlasticizerContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#SuperPlasticizerContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T10:48:17Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#SuperPlastifier</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -3273,21 +3684,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#Water</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-23T14:03:39Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#WaterContent</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#WaterContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-24T11:29:17Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#WaterContent</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-30T10:35:09Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
