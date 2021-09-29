@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="http://www.semanticweb.org/btorres/ontologies/2021/7/AAC_Ontology">
-    <Prefix name="" IRI="http://www.semanticweb.org/btorres/ontologies/2021/7/untitled-ontology-49"/>
+    <Prefix name="" IRI="http://www.semanticweb.org/btorres/ontologies/2021/7/AAC_Ontology"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -15,14 +15,43 @@
     <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
     <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ArtifactOntology</Import>
     <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/ExtendedRelationOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/GeospatialOntology</Import>
     <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/InformationEntityOntology</Import>
+    <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/TimeOntology</Import>
     <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Mid/2021-03-01/UnitsOfMeasureOntology</Import>
     <Import>http://www.ontologyrepository.com/CommonCoreOntologies/Upper/2021-03-01/ROImport</Import>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Document"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/List"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ProportionalRatioMeasurementInformationContentEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/YearIdentifier"/>
+    </Declaration>
     <Declaration>
         <Class IRI="#Activator"/>
     </Declaration>
     <Declaration>
         <Class IRI="#ActivatorContent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ActivatorMolCompPercentage"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Additive"/>
@@ -70,7 +99,7 @@
         <Class IRI="#CrushedStone"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CubeSample"/>
+        <Class IRI="#CubeConcreteSample"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CubeSampleProperties"/>
@@ -94,7 +123,7 @@
         <Class IRI="#CuringTemperature"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#CylinderSample"/>
+        <Class IRI="#CylinderConcreteSample"/>
     </Declaration>
     <Declaration>
         <Class IRI="#CylinderSampleProperties"/>
@@ -157,7 +186,7 @@
         <Class IRI="#InitialCuringTime"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#InsideReferenceSampleID"/>
+        <Class IRI="#InsideReferenceSampleConcreteMixID"/>
     </Declaration>
     <Declaration>
         <Class IRI="#MaterialDensity"/>
@@ -229,7 +258,7 @@
         <Class IRI="#RetarderContent"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#SampleID"/>
+        <Class IRI="#SampleConcreteMixID"/>
     </Declaration>
     <Declaration>
         <Class IRI="#SampleInCementField"/>
@@ -667,6 +696,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ActivatorMolCompPercentage"/>
+        <Class IRI="#MolecularCompositionPercentage"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Additive"/>
         <Class IRI="#ConstituentMaterial"/>
     </SubClassOf>
@@ -790,8 +823,15 @@
         <Class IRI="#CoarseAggregate"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CubeSample"/>
+        <Class IRI="#CubeConcreteSample"/>
         <Class IRI="#SampleInCementField"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CubeConcreteSample"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_made_of"/>
+            <Class IRI="#Concrete"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CubeSampleProperties"/>
@@ -801,7 +841,7 @@
         <Class IRI="#CubeSampleProperties"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#CubeSample"/>
+            <Class IRI="#CubeConcreteSample"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -850,8 +890,15 @@
         <Class IRI="#CuringProperties"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#CylinderSample"/>
+        <Class IRI="#CylinderConcreteSample"/>
         <Class IRI="#SampleInCementField"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CylinderConcreteSample"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_made_of"/>
+            <Class IRI="#Concrete"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#CylinderSampleProperties"/>
@@ -861,7 +908,7 @@
         <Class IRI="#CylinderSampleProperties"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#CylinderSample"/>
+            <Class IRI="#CylinderConcreteSample"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -948,14 +995,14 @@
         <Class IRI="#CuringProperties"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InsideReferenceSampleID"/>
-        <Class IRI="#SampleID"/>
+        <Class IRI="#InsideReferenceSampleConcreteMixID"/>
+        <Class IRI="#SampleConcreteMixID"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#InsideReferenceSampleID"/>
+        <Class IRI="#InsideReferenceSampleConcreteMixID"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#SampleInCementField"/>
+            <Class IRI="#ConcreteMix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -1090,6 +1137,13 @@
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/YearIdentifier"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#PublicationYear"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#ReferencePublication"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#RatioInAACField"/>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/ProportionalRatioMeasurementInformationContentEntity"/>
     </SubClassOf>
@@ -1109,8 +1163,22 @@
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#ReferenceCode"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#isPropertyOf"/>
+            <Class IRI="#ReferencePublication"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#ReferencePublication"/>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Document"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ReferencePublication"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#hasProperty"/>
+            <Class IRI="#PublicationAuthors"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Retarder"/>
@@ -1121,19 +1189,26 @@
         <Class IRI="#AdditiveContent"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SampleID"/>
+        <Class IRI="#SampleConcreteMixID"/>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/CodeIdentifier"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#SampleID"/>
+        <Class IRI="#SampleConcreteMixID"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#isPropertyOf"/>
-            <Class IRI="#SampleInCementField"/>
+            <Class IRI="#ConcreteMix"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SampleInCementField"/>
         <Class IRI="http://www.ontologyrepository.com/CommonCoreOntologies/Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SampleInCementField"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/is_made_of"/>
+            <Class IRI="#FinalMaterial"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#SamplePropertiesInAACField"/>
@@ -1245,8 +1320,8 @@
         <Class IRI="#FinalMaterial"/>
     </DisjointClasses>
     <DisjointClasses>
-        <Class IRI="#CubeSample"/>
-        <Class IRI="#CylinderSample"/>
+        <Class IRI="#CubeConcreteSample"/>
+        <Class IRI="#CylinderConcreteSample"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="#CubeSampleProperties"/>
@@ -1857,6 +1932,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#ActivatorMolCompPercentage</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#ActivatorMolCompPercentage</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-29T11:25:38Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#Additive</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2097,12 +2182,12 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#CubeSample</IRI>
+        <IRI>#CubeConcreteSample</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#CubeSample</IRI>
+        <IRI>#CubeConcreteSample</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:10:22Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -2317,6 +2402,16 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>#CylinderConcreteSample</IRI>
+        <Literal>Benjami Moreno</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <IRI>#CylinderConcreteSample</IRI>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:10:22Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
         <IRI>#CylinderDiameter</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
@@ -2334,16 +2429,6 @@
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
         <IRI>#CylinderHeight</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:13:36Z</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#CylinderSample</IRI>
-        <Literal>Benjami Moreno</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#CylinderSample</IRI>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-26T11:10:22Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
@@ -2782,17 +2867,17 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#InsideReferenceSampleID</IRI>
+        <IRI>#InsideReferenceSampleConcreteMixID</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#InsideReferenceSampleID</IRI>
+        <IRI>#InsideReferenceSampleConcreteMixID</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
-        <IRI>#InsideReferenceSampleID</IRI>
+        <IRI>#InsideReferenceSampleConcreteMixID</IRI>
         <Literal>The identifier of a sample used internally in the context of a specified publication</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -3377,17 +3462,17 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
-        <IRI>#SampleID</IRI>
+        <IRI>#SampleConcreteMixID</IRI>
         <Literal>Benjami Moreno</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/date"/>
-        <IRI>#SampleID</IRI>
+        <IRI>#SampleConcreteMixID</IRI>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#dateTime">2021-08-25T10:13:44Z</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty IRI="http://www.ontologyrepository.com/CommonCoreOntologies/definition"/>
-        <IRI>#SampleID</IRI>
+        <IRI>#SampleConcreteMixID</IRI>
         <Literal>The ID of an individual Sample in some specified context</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
